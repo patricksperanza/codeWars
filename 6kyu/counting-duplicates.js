@@ -20,7 +20,7 @@ function duplicateCount(text) {
       count[converted[i]] += 1;
     } else [(count[converted[i]] = 1)];
   }
-  console.log(count);
+
   let result = 0;
   for (let letter in count) {
     if (count[letter] > 1) {
