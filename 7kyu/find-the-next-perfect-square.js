@@ -11,13 +11,13 @@
 // 114 --> -1 since 114 is not a perfect square
 
 function findNextSquare(sq) {
-  let i = 1;
+  let i = 1
   while (i * i <= sq) {
     if (i * i === sq) {
-      let n = i + 1;
-      return n ** 2;
+      let n = i + 1
+      return n ** 2
     }
-    i++;
+    i++
   }
-  return -1;
+  return -1
 }
