@@ -11,7 +11,19 @@
 // There will always be at least one number in the input string.
 // Output string must be two numbers separated by a single space, and highest number is first.
 
-function highAndLow(numbers){
-    let arr = numbers.split(' ').map(num => Number(num))
-    return Math.max(...arr) + ' ' + Math.min(...arr)
+function highAndLow(numbers) {
+  let arr = numbers.split(" ").map((num) => Number(num))
+  return Math.max(...arr) + " " + Math.min(...arr)
+}
+
+function highAndLowOpt2(numbers) {
+  let arr = numbers.split(" ")
+  let numArray = arr.map((num) => Number(num)).sort((a, b) => a - b)
+  if (numArray.length > 1) {
+    let highest = numArray.pop()
+    let lowest = numArray.shift()
+    return `${highest} ${lowest}`
+  } else {
+    return `${numArray[0]} ${numArray[0]}`
   }
+}
