@@ -4,7 +4,12 @@
 
 // solution(5) // should return "Value is 00005"
 
-function solution(value) {
+function solution1(value) {
+  value = String(value).padStart(5, "0")
+  return `Value is ${value}`
+}
+
+function solution2(value) {
   if (String(value).length < 5) {
     let numOfZeros = 5 - String(value).length
     for (let i = 0; i < numOfZeros; i++) {
